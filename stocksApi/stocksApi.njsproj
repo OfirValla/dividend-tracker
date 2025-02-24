@@ -42,9 +42,11 @@
     <TypeScriptCompile Include="db.ts" />
     <TypeScriptCompile Include="models\Dividend.ts" />
     <TypeScriptCompile Include="models\Stock.ts" />
+    <TypeScriptCompile Include="routes\stocks.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
+    <Folder Include="routes\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

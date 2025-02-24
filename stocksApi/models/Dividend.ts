@@ -1,6 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../db';
 import { v7 as uuidv7 } from 'uuid';
+
+import sequelize from '../db';
 import Stock from './Stock';
 
 class Dividend extends Model {

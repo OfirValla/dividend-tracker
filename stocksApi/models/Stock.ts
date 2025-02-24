@@ -1,12 +1,13 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../db';
 import { v7 as uuidv7 } from 'uuid';
+
+import sequelize from '../db';
 
 class Stock extends Model {
     public id!: string;
     public symbol!: string;
     public lastUpdate!: Date;
-    public userAmount!: number;
+    public amount!: number;
 }
 
 Stock.init(
@@ -23,14 +24,9 @@ Stock.init(
         },
         lastUpdate: {
             type: DataTypes.DATE,
-            defaultValue: () => {
-                // Set default to yesterday's date
-                const yesterday = new Date();
-                yesterday.setDate(yesterday.getDate() - 1);
-                return yesterday;
-            },
+            allowNull: true
         },
-        userAmount: {
+        amount: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },

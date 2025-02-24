@@ -1,7 +1,7 @@
 import { chromium } from 'playwright-extra';
 import stealth from 'puppeteer-extra-plugin-stealth';
 
-const SYMBOLS = ['MSTY', 'CONY', 'SMCY'];
+const SYMBOLS = ['MSTY', 'CONY', 'NVDY'];
 
 chromium.use(stealth());
 
